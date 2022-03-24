@@ -1,0 +1,429 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  /* margin: 0;
+  padding: 0; */
+  min-width: 100vw;
+  max-height: 100vh;
+  background: rgb(0, 0, 0);
+  cursor: default;
+}
+
+#AppContainer {
+  --w1:800px;
+  --n:3;
+  /* second breakpoint*/
+  --w2:400px;
+  --m:2;
+  display: grid;
+  min-width: 100%;
+  max-height: 100vh;
+  grid-template-columns:
+  repeat(auto-fill,
+    minmax(clamp(clamp(
+        100%/(var(--n) + 1) + 0.1%, 
+      (var(--w1) - 100vw)*1000,
+        100%/(var(--m) + 1) + 0.1%), 
+      (var(--w2) - 100vw)*1000,
+        100%), 1fr));
+  text-align: center;
+  position: fixed;
+  /* display: grid;
+  min-width: 100%;
+  max-height: 100vh;
+  grid-template-columns: 29% 38% 34%;
+  text-align: center;
+  position: fixed; */
+}
+
+
+#SignIn{
+  color: white;
+}
+
+
+.Column {
+  flex-wrap: nowrap;
+	min-height: 100vh;
+  max-height: 100vh;
+  border: 0.5pt;
+  border-style: solid;
+  border-color: rgba(124, 124, 124, 0.608);
+  overflow-x: hidden;
+}
+
+.AllNewsContainer {
+  margin: 10%;
+  padding: 5%;
+  max-width: 50%;
+  background-color: rgba(33, 33, 33, 0.775);
+  border-radius: 30px;
+}
+
+.newsContainer {
+  width: 100%;
+}
+
+.newsRow {
+  grid-template-rows: 120% 89%;
+}
+
+.columnHeader {
+  text-align: left;
+  width: 100%;
+}
+
+.columnArticles {
+  max-width: 100%;
+}
+
+.pictureColumn {
+  display: grid;
+  gap: 5%;
+  grid-template-columns: 50% 50%;
+}
+
+.ColumnTitle {
+  text-align: left;
+  max-width: 100%;
+}
+
+.ColumnPicture {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.newsPicture {
+  border-radius: 30%;
+  object-fit: cover;
+  max-width: 100%;
+  height: 100px;
+}
+
+/* Left Div */
+
+.LeftDiv {
+  /* display: inline-block; */
+  /* width: 100%; */
+  height: 100%;
+  color: white;
+}
+
+.TwitterLogo img {
+  max-height: 26px;
+  padding-top: 20%;
+  padding-bottom: 12%;
+}
+
+.NavigationLinks {
+  list-style: none;
+}
+
+.NavigationLinks li :hover {
+  background-color: rgba(49, 49, 49, 0.693);
+  border-radius: 50px;
+}
+
+.NavLink {
+  display: block;
+  padding: 16px;
+}
+
+
+/* .NavLink :hover {
+  background-color: rgba(49, 49, 49, 0.693);
+} */
+
+
+/* Middle Div */
+
+.MiddleDiv{
+  /* display: inline-block; */
+  /* width: 100%; */
+  height: 100%;
+  color: white;
+  /* float: left; */
+}
+
+
+#TweetsContainer {
+  display: grid;
+  grid-template-rows: 230px 1113px;
+  overflow-y: auto;
+}
+
+.TweetColumn1 {
+  padding: 3%;
+  border: 0.5pt;
+  border-style: solid;
+  border-color: rgba(124, 124, 124, 0.608);
+}
+
+.TweetColumn2 {
+  height: 100%;
+  border: 0.5pt;
+  border-style: solid;
+  border-color: rgba(124, 124, 124, 0.608);
+}
+
+/* .TweetColumn3 {
+  height: 100%;
+  border: 0.5pt;
+  border-style: solid;
+  border-color: rgba(124, 124, 124, 0.608);
+} */
+
+
+.EachTweet {
+  border: 0.5pt;
+  border-style: solid;
+  border-color: rgba(124, 124, 124, 0.608);
+  padding: 5% 3% 5% 3%;
+  cursor: pointer;
+}
+
+#tweetContainer {
+  display: grid;
+  width: auto;
+  min-height: 100%;
+  grid-template-columns: max-content 78%;
+  column-gap: 7%;
+}
+
+.rightTweetDiv{
+  display: inline-block;
+  display: flex; 
+  /* min-height: 100px; */
+  width: 100%;
+}
+
+.picDiv{
+  padding: 0 10%;
+}
+
+.picDivCompose{
+  text-align: left;
+  padding-right: 3%;
+}
+
+.profilePicture {
+  border-radius: 100%;
+  height: 55px;
+  width: 55px;
+}
+
+.leftTweetDiv {
+  display: grid; 
+  grid-template-rows: max-content max-content max-content;
+}
+
+.topLeftDiv {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  /* max-height: 80%; */
+  /* width: 100%;  */
+}
+
+.usernameInfo {
+  text-align: left;
+  width: 100%;
+  
+}
+
+.usernameTyped {
+  justify-content: center;
+  font-weight: bold;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+.deleteModal {
+  text-align: end;
+}
+
+.bottomLeftDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2%;
+}
+
+.tweetInfo {
+  text-align: left;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+#tweetInfo h5{
+  margin-bottom: 9%;
+  font-weight: 550;
+}
+
+.interactiveContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.iconContainer {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+/* .interactBtn {
+  justify-content: center;
+  float: left;
+} */
+#HomeAndInputContainer {
+  display: grid;
+  grid-template-rows: 30% min-content;
+  height: 100%
+}
+
+/* #HomeAndInputContainer h3{
+  padding-left: 5%;
+} */
+
+.topDiv {
+  text-align: left;
+  width: 100%;
+}
+
+.homeDiv{
+  padding: 2% 0 0 1.5%;
+  justify-content: center;
+}
+
+.homeDiv h3{
+  margin: 0;
+}
+
+.middleDiv {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+#InputTweet {
+  /* background-color: black; */
+  border-style: none;
+  border-bottom: rgba(124, 124, 124, 0.608);
+  cursor: text;
+  color: white;
+}
+
+#tweetInput {
+  padding: 0 0 0 3%;
+  grid-template-rows: min-content 30%;
+  display: grid; 
+}
+
+.profileImageForm {
+  float: left;
+  width: max-content;
+  margin-left: 5%;
+}
+
+#tweetBoxForm {
+  text-align: left;
+  /* margin-top: 35%; */
+}
+
+#btnIconsDiv {
+  width: 100%;
+  grid-template-columns: 55% 30%;
+  display: grid;
+  justify-content: space-between;
+}
+
+.iconDiv {
+  display: grid;
+  padding-top: 8%;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+}
+
+/* Right Div */
+
+.RightDiv {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  color: white;
+  /* float: right; */
+}
+
+
+#submitTweetBtn {
+  background-color: #1DA1F2;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+#submitTweetBtn:hover {
+  background-color: #1DA1F2;
+  cursor: pointer;
+}
+
+[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+[type="tweetText"] {
+  background-color: black;
+  border-style: none;
+  font-weight: 530;
+  font-size: 25px;
+  width:68%;
+  margin: 5px 5px 5px 0;
+  padding: 10px 10px 10px 0;
+  color: white;
+}
+
+[type="tweetText"]:focus {
+  outline: none;
+  border: none;
+}
+
+
